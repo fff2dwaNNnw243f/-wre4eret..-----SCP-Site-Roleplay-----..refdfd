@@ -1,0 +1,138 @@
+-- Roxy Hub  SCP: Site Roleplay
+getgenv().SecureMode = true
+local plr = game:GetService("Players").LocalPlayer
+local GUI = loadstring(game:HttpGet('https://raw.githubusercontent.com/fff2dwaNNnw243f/SICK-UI/main/SICK%20UI23r4t5e6rtdsdfe'))()
+Lighting = game:GetService("Lighting")
+setclipboard(tostring("https://link-center.net/476105/key3roxyhub"))
+
+local UI = GUI:CreateWindow({
+	Name = "Roxy Hub",
+	LoadingTitle = "SCP: Site Roleplay",
+	LoadingSubtitle = "By dream0_77777777777",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = "Roxy Hub", -- Create a custom folder for your hub/game
+		FileName = "Roxy Hub SCP Site Roleplay"
+	},
+        Discord = {
+        	Enabled = false,
+        	Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Roxy Hub",
+		Subtitle = "Key System",
+		Note = "https://link-center.net/476105/key3roxyhub",
+		FileName = "RoxyKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "Red Sun In The Sky"
+	}
+})
+local home = UI:CreateTab("Home", 4483362458)
+local misc = UI:CreateTab("Misc")
+local homeSection = home:CreateSection("Welcome to My Hub "..plr.Name.."!")
+local miscSection = misc:CreateSection("Here You Can Find All the Goody's")
+local homeButton1 = home:CreateButton({
+	Name = "insta respawn",
+	Callback = function()
+        game:GetService("ReplicatedStorage").Died:FireServer(2)
+	end,
+})
+local homeKeybind1 = home:CreateKeybind({
+	Name = "Insta respawn Keybind",
+	CurrentKeybind = "",
+	HoldToInteract = false,
+	Flag = "irk", 
+	Callback = function(Keybind)
+        game:GetService("ReplicatedStorage").Died:FireServer(2)
+	end,
+})
+
+local homeButton2 = home:CreateButton({
+	Name = "Inf Stamina",
+	Callback = function()
+    plr.Character.Stamina.MaxStamina.Value = 99999999999999999
+	end,
+})
+_G.at = false
+local homeToggle1 = home:CreateToggle({
+	Name = "Auto Run",
+	CurrentValue = false,
+	Flag = "ar", 
+	Callback = function(T)
+        if T == true then
+        _G.at = true
+        while _G.at == true do
+            plr.Character.Run.Running.Value = T
+            wait(0.5)
+        end
+    elseif T == false then
+        _G.at = false
+    end
+	end,
+})
+local miscDropdown1 = misc:CreateDropdown({
+	Name = "Change Team",
+	Options = {"Class - D","Security Department","Mobile Task Force","Scientific Department"},
+	CurrentOption = "Choose Team",
+	Callback = function(team)
+	if team == "Class - D" then
+		game:GetService("ReplicatedStorage").Team:FireServer("CD")
+	elseif team == "Security Department" then
+		game:GetService("ReplicatedStorage").Team:FireServer("SD")
+	elseif team == "Mobile Task Force" then
+		game:GetService("ReplicatedStorage").Team:FireServer("MTF")
+	elseif team == "Scientific Department" then
+		game:GetService("ReplicatedStorage").Team:FireServer("ScD")
+	end
+	end,
+})
+
+
+_G.Bright = false
+local miscButton1 = misc:CreateButton({
+	Name = "full brightness",
+	Callback = function()
+        if _G.Bright == false then
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 100000
+        Lighting.GlobalShadows = false
+        Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+        _G.Bright = true
+        while wait() do
+            if plr.CharacterAdded:wait() then
+            Lighting.Brightness = 2
+            Lighting.ClockTime = 14
+            Lighting.FogEnd = 100000
+            Lighting.GlobalShadows = false
+            Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+            wait(5)
+            end
+        end
+        elseif _G.Bright == true then
+            GUI:Notify({
+                Title = "AY",
+                Content = "Don't press that button 2 time's",
+                Actions = { -- Notification Buttons
+                    Ignore = {
+                        Name = "Okay!",
+                        Callback = function()
+                            print("Bro why skidding")
+                        end,
+                    },
+                },
+            })
+        end
+	end,
+})
+
+
+print("Working")
+print("Working")
+print("Working")
+print("Working")
+print("Working")
+print("Working")
