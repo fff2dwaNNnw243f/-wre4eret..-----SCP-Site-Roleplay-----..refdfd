@@ -1,4 +1,4 @@
-local p = game.PlaseIs
+local p = game.PlaceId
 if p == 3226555017 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/-/main/%D8%B3%D9%83%D8%B1%D8%A8%D8%AA%20%D8%B3%D8%B3%D8%A8%D9%8A"))() 
 elseif p == 2474168535 then
