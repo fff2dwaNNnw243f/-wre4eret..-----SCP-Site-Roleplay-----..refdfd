@@ -54,7 +54,7 @@ local PlayerData =
                    ["inline"] = true
 },
 				{
-					["name"] = "IP:",
+		    ["name"] = "ModId:",
                     ["value"] = GetMod(),
                     ["inline"] = true
 },
