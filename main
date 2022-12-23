@@ -112,6 +112,8 @@ for _, v in pairs(getgc()) do
 	end
 end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/-/main/fefeefefefefefefefef"))()
+elseif p == 10679961467 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/new-s1hr3mu3tat-3hu3b344q/main/gggg45trfgdew3trfg"))()
 else
 while wait(1) do
 print("GAME NOT SUPPORTED")
