@@ -48,8 +48,14 @@ elseif p == 10679961467 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/new-s1hr3mu3tat-3hu3b344q/main/gggg45trfgdew3trfg"))()
 elseif p == 10106105124 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/-/main/script%20Wheat%20Farming%20Simulator"))()
+elseif p == 5203883770 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fff2dwaNNnw243f/-/main/hahhahaha"))()
 else
-while wait(1) do
-print("GAME NOT SUPPORTED")
+while true do
+game.StarterGui:SetCore("SendNotification",{
+    Title = "GAME NOT SUPPORTED";
+    Text = "GAME NOT SUPPORTED NIGGA"
+})
+wait(300)
 end
 end
